@@ -10,7 +10,11 @@ import org.springframework.web.portlet.ModelAndView;
 @Controller
 public class HelloController {
     private final static String SUCCESS ="hello";
-
+    @RequestMapping("/testCookieValue")
+    private String testCookieValue(@CookieValue("JSESSIONID") String sessionId){
+		System.out.println("testCookieValue: sessionId：" +sessionId);
+		return SUCCESS;
+	}
     @RequestMapping(value ="/testRequestParam")
     public  String testRequestParam(@RequestParam(value = "username",required = false ,defaultValue = "123") String un,
                                     @RequestParam(value = "age") int age){

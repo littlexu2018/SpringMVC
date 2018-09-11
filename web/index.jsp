@@ -8,6 +8,7 @@
   <br> <br>
 
   <br> <br>
+  <a href="<%= this.getServletContext().getContextPath() %>/s1/testCookieValue">testCookieValue</a><br>
   <br> <br>
   <a href="<%= this.getServletContext().getContextPath() %>/s1/testRequestParam?username=xuhaohao&age=2">testRequestParam</a><br>
   <br> <br>
