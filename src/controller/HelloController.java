@@ -1,5 +1,6 @@
 package controller;
 
+import com.xuhh.springmvc.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
@@ -10,8 +11,19 @@ import org.springframework.web.portlet.ModelAndView;
 @Controller
 public class HelloController {
     private final static String SUCCESS ="hello";
+    /**
+     * @Description:
+     *  Spring MVC 会按照请求参数名和pojo属性名进行自动匹配
+     *  自动为对象填充属性值，还支持级联属性。如dept.deptId  dept.address.tel
+     */
+    @RequestMapping("/testPojo")
+    public  String testPojo(User user){
+        System.out.println("testPojo : "+user);
+        return SUCCESS;
+    }
+
     @RequestMapping("/testCookieValue")
-    private String testCookieValue(@CookieValue("JSESSIONID") String sessionId){
+    public String testCookieValue(@CookieValue("JSESSIONID") String sessionId){
 		System.out.println("testCookieValue: sessionId：" +sessionId);
 		return SUCCESS;
 	}
