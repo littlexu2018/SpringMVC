@@ -6,7 +6,21 @@
   </head>
   <body>
   <br> <br>
-
+  <form action="s1/testPojo" method="post">
+    username: <input type ="text" name="username"/>
+    <br>
+    password: <input type ="password" name="password"/>
+    <br>
+    email:<input type="text" name="email"/>
+    <br>
+    age:<input type="text" name="age">
+    <br>
+    city:<input type="text" name="address.city">
+    <br>
+    province:<input type="text" name="address.province">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
   <br> <br>
   <a href="s1/testCookieValue">testCookieValue</a><br>
   <br> <br>
