@@ -7,6 +7,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.portlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 @RequestMapping("/s1")
 @Controller
 public class HelloController {
@@ -16,6 +19,12 @@ public class HelloController {
      *  Spring MVC 会按照请求参数名和pojo属性名进行自动匹配
      *  自动为对象填充属性值，还支持级联属性。如dept.deptId  dept.address.tel
      */
+    @RequestMapping("/testServlet")
+    public String testServlet(HttpServletRequest request, HttpServletResponse response){
+        System.out.println(request+" "+response);
+        return SUCCESS;
+    }
+
     @RequestMapping("/testPojo")
     public  String testPojo(User user){
         System.out.println("testPojo : "+user);
