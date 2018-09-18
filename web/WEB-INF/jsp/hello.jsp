@@ -4,7 +4,7 @@
 @author HelloWood
 @email hellowoodes@gmail.com
 -->
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"  isELIgnored ="false" language="java" %>
 <html>
 <head>
     <title>Title
@@ -14,6 +14,6 @@
 
 
 <h1>Success Page!</h1>
-<h1>${msg}</h1>
+<h1>time: ${requestScope.time}</h1>
 </body>
 </html>
