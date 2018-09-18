@@ -6,6 +6,8 @@
   </head>
   <body>
   <br> <br>
+  <a href="s1/testModelAndView">testModelAndView</a>
+  <br> <br>
   <form action="s1/testPojo" method="post">
     username: <input type ="text" name="username"/>
     <br>
