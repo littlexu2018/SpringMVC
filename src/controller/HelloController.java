@@ -3,17 +3,27 @@ package controller;
 import com.xuhh.springmvc.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.portlet.ModelAndView;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 @RequestMapping("/s1")
 @Controller
 public class HelloController {
     private final static String SUCCESS ="hello";
+
+    @RequestMapping("/testModelAndView")
+    public  ModelAndView testModelAndView(){
+        ModelAndView modelAndView =new ModelAndView(SUCCESS);
+        modelAndView.addObject("time",new Date());
+        return modelAndView;
+    }
+
     /**
      * @Description:
      *  Spring MVC 会按照请求参数名和pojo属性名进行自动匹配
