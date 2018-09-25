@@ -6,6 +6,11 @@
   </head>
   <body>
   <br> <br>
+  <br> <br>
+  <a href="s1/testSessionAttributes">testSessionAttributes</a>
+  <br> <br>
+  <a href="s1/testMap">testMap</a>
+  <br> <br>
   <a href="s1/testModelAndView">testModelAndView</a>
   <br> <br>
   <form action="s1/testPojo" method="post">
