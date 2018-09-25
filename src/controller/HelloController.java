@@ -8,15 +8,38 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ *@SessionAttributes 除了可以通过属性的名称指定需要放到会话中的属性外（其实是使用的是value）
+ * 还可以通过模型属性的对象类型指定哪些模型属性需要放在会话中去（实际上使用的是types属性值）
+ *
+ * 注意：该注解只能放在类上面，而不能放在方法上面
+ */
+@SessionAttributes(types = {String.class},value = {"user"})
 @RequestMapping("/s1")
 @Controller
 public class HelloController {
     private final static String SUCCESS ="hello";
-
+    @RequestMapping("/testSessionAttributes")
+    public String testSessionAttributes(Map<String ,Object> map){
+        User user = new User("xuhh","mima","123@xuhh.com",18);
+        map.put("user",user);
+        map.put("school","dawuyizhong");
+        return SUCCESS;
+    }
+    @RequestMapping("/testMap")
+    public String testMap(Map<String,Object> map){
+        System.out.println("testMap");
+        map.put("names", Arrays.asList("xuhh","hurui","chenglei"));
+        return SUCCESS;
+    }
+    /**
+     * @return: org.springframework.web.servlet.ModelAndView
+     *SpringMVC会把ModelAndView的model放入到request域对象中去
+     */
     @RequestMapping("/testModelAndView")
     public  ModelAndView testModelAndView(){
         ModelAndView modelAndView =new ModelAndView(SUCCESS);
