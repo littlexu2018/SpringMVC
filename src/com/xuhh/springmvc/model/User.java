@@ -8,11 +8,20 @@ package com.xuhh.springmvc.model;
  * @Modified By:
  */
 public class User {
+	private Integer id;
 	private String username;
 	private String password;
 	private String email;
 	private int age;
 	private  Address address;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public String getUsername() {
 		return username;
@@ -54,14 +63,26 @@ public class User {
 		this.address = address;
 	}
 
+//	@Override
+//	public String toString() {
+//		return "User{" +
+//				"username='" + username + '\'' +
+//				", password='" + password + '\'' +
+//				", email='" + email + '\'' +
+//				", age=" + age +
+//				", address=" + address +
+//				'}';
+//	}
+
+	/*这个地方为了测试方便，把toString重写了一下 */
 	@Override
 	public String toString() {
 		return "User{" +
-				"username='" + username + '\'' +
+				"id=" + id +
+				", username='" + username + '\'' +
 				", password='" + password + '\'' +
 				", email='" + email + '\'' +
 				", age=" + age +
-				", address=" + address +
 				'}';
 	}
 
