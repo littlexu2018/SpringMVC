@@ -5,7 +5,24 @@
     <title>$Title$</title>
   </head>
   <body>
-  <br> <br>
+  <br>
+    <!--
+        模拟修改操作
+          1.模拟数据：1，Tom， 123456， tom@xuhh.com,12
+          2.密码不能修改，
+          3.表单回显，模拟操作直接在表单填写对应的属性值
+     -->
+  <form action="s2/testModelAttribute" method="post">
+    <input type="hidden" name="id" value="1">
+    username: <input type="text" name="username" value="Tom">
+    <br>
+    email: <input type="text"  name="email" value="tom@xuhh.com" >
+    <br>
+    age:<input type="text" name="age" value="12">
+    <br>
+    <input type="submit" value="submit">
+  </form>
+  <br>
   <br> <br>
   <a href="s1/testSessionAttributes">testSessionAttributes</a>
   <br> <br>
