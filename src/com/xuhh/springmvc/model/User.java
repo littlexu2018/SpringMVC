@@ -86,6 +86,14 @@ public class User {
 				'}';
 	}
 
+	public User(Integer id, String username, String password, String email, int age) {
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.age = age;
+	}
+
 	public User(String username, String password, String email, int age) {
 		this.username = username;
 		this.password = password;
@@ -93,6 +101,5 @@ public class User {
 		this.age = age;
 	}
 	public  User(){
-
 	}
 }
