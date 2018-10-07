@@ -6,6 +6,8 @@
   </head>
   <body>
   <br>
+  <a href="s2/testView">testView</a>
+  <br>
     <!--
         模拟修改操作
           1.模拟数据：1，Tom， 123456， tom@xuhh.com,12
