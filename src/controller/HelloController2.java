@@ -15,6 +15,12 @@ import java.util.Map;
 @Controller
 public class HelloController2 {
     private final static String SUCCESS ="hello";
+
+    @RequestMapping("/testView")
+    public  String testView(){
+        System.out.println("testView");
+        return "helloView";
+    }
     /***
      * @auther: xuhh
      * @date: 21:59 2018/10/5
